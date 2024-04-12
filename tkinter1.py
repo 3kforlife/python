@@ -1,0 +1,26 @@
+from tkinter import *
+fen=Tk()
+def somme():
+    n=float(e1.get())
+    m=float(e2.get())
+    add=m + n
+    s.delete(0,END)
+    s.insert(0,add)
+fen.title("somme")
+fen.geometry("300x300")
+n1=Label(fen,text="nombre 1: ")
+n2=Label(fen,text="nombre 2: ")
+som=Label(fen,text="somme: ")
+e1=Entry(fen)
+e2=Entry(fen)
+s=Entry(fen)
+n1.grid(row=0)
+n2.grid(row=2)
+e1.grid(row=0, column=2)
+e2.grid(row=2, column=2)
+s.grid(row=4, column=2)
+som.grid(row=4)
+bt=Button(fen,text="VALIDER", command=somme)
+bt.grid(row=8,column=4)
+fen.mainloop()
+
